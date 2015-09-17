@@ -13,4 +13,4 @@ USER app
 
 COPY . /usr/src/app
 
-CMD ["/usr/src/app/bin/codeclimate-rubocop"]
+CMD ["/usr/src/app/bin/cached-rubocop"]

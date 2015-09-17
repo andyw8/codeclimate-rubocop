@@ -58,6 +58,11 @@ module CC
         path.gsub(%r|^#{realpath}/|, '')
       end
 
+      def include?(local_path)
+        exclusions = @engine_config["include_paths"] || []
+        exclusions.include?(local_path)
+      end
+
       def rubocop_config_store
         @rubocop_config_store ||= begin
           config_store = RuboCop::ConfigStore.new

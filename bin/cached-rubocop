@@ -1,0 +1,8 @@
+#!/bin/sh
+
+SCRIPT=$(readlink -f "$0")
+DIR=$( cd "$( dirname "$SCRIPT" )" && pwd )
+
+#echo "$DIR"
+
+$DIR/engine-cache "$DIR/codeclimate-rubocop"
